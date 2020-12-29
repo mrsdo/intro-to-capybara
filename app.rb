@@ -1,4 +1,14 @@
-class Application < Sinatra::Base
-  # Write your code here!
+# frozen_string_literal: true
 
+# Class Application
+class Application < Sinatra::Base
+  # Old route from previous tests
+  get '/' do
+    erb :index
+  end
+
+  # New route to respond to the form submission
+  post '/greet' do
+    erb :greet
+  end
 end
